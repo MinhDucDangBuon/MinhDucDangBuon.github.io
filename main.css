@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #34374f;
+    font-family: Arial, sans-serif; /* Thêm font chữ mặc định */
+    overflow: hidden; /* Ẩn thanh cuộn */
+}
+
+.border-container {
+    display: flex;
+    flex-direction: column;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 30px solid #abdea5;
+    box-sizing: border-box;
+    background-color: #cce0ed;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    
+}
+
+.border-container img {
+    width: 550px;
+    max-width: 330px; /* Giới hạn chiều rộng tối đa của hình ảnh */
+    margin: 12px 0; /* Khoảng cách giữa các hình ảnh, với cả ảnh 2 và 4 */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 9);
+    
+}
+
+.border-container img:nth-child(odd) {
+    margin-left: 120px; /* Ảnh lẻ (1 và 3) lệch sang bên trái */
+}
+
+.border-container img:nth-child(even) {
+    margin-left: 300px; /* Ảnh chẵn (2 và 4) lui sang bên phải */
+}
+
+.text-box {
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Pacifico', cursive;
+    color: #000000;
+    animation: slideInUp 2s ease;
+    transition: transform 0.5s;
+    overflow: hidden;
+}
+
+.logo-name {
+    position: absolute;
+    right: 300px;
+    top: 50px;
+    font-family: 'Pacifico', cursive;
+    font-size: 46px;
+    color: #91908e;
+    transition: transform 0.5s;
+}
+
+.image1, .image3 {
+    width: 550px;
+    max-width: 330px; /* Giới hạn chiều rộng tối đa của hình ảnh */
+    margin: 12px 0; /* Khoảng cách giữa các hình ảnh, với cả ảnh 2 và 4 */
+    
+    animation: floating 2s ease infinite;
+ 
+}
+.image2, .image4{
+    width: 550px;
+    max-width: 330px; /* Giới hạn chiều rộng tối đa của hình ảnh */
+    margin: 12px 0; /* Khoảng cách giữa các hình ảnh, với cả ảnh 2 và 4 */
+    animation: floating 2s ease infinite;
+
+}
+.image1 {
+    animation-delay: 0s;
+}
+.image2 {
+    animation-delay: 1s;
+}
+.image3 {
+    animation-delay: 1.5s;
+}
+.image4 {
+    animation-delay: 2s;
+}
+
+@keyframes slideInUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

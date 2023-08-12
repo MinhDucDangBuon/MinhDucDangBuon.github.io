@@ -1,0 +1,93 @@
+/* Các phần khác của tệp CSS */
+
+/* Thanh menu */
+.menu-toggle {
+    position: fixed;
+    top: 44px;
+    left: 44px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1000; /* Ensure the menu icon is above the menu */
+    transition: left 0.3s ease;
+
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: #333;
+}
+
+/* Menu ẩn đi */
+.menu-overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+}
+
+.menu {
+    background-color: #bbf6e6;
+    padding: 10px 0;
+    border-radius: 6px;
+    width: 400px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    animation: slideInLeft 0.5s ease;
+}
+
+.menu a {
+    display: block;
+    padding: 8px 16px;
+    color: #333;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+}
+/* Hiển thị menu khi được kích hoạt */
+.menu-overlay.active {
+    display: flex;
+}
+/* Các phần khác của tệp CSS */
+
+/* Popup */
+.popup-overlay {
+    position: fixed;
+    top: 50px;
+    left: 100px; /* Đưa cách cạnh trái về 100px */
+    width: calc(100% - 100px);
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup {
+    /* background-color: #7fdec0; */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    margin-top: 0;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
